@@ -1,0 +1,224 @@
+/* Center everything on screen */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+    background: #f0ece4;
+    box-sizing: border-box;
+}
+
+/* Main container */
+.to-do-list {
+    width: 600px;
+    max-width: 90%;
+
+    background: transparent;
+    padding: 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+}
+
+/* Logo */
+.logo {
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+    margin-bottom: -130px;
+    ;
+}
+
+/* Title */
+h1 {
+    margin-bottom: 25px;
+
+    font-size: 2rem;
+
+    color: #5a3d00;
+}
+
+/* Input area */
+input {
+    width: 65%;
+    padding: 17px;
+    border: 2px solid #e8921a;
+    border-radius: 150px;
+    font-size: 1rem;
+    outline: none;
+    background: white;
+    color: #3d2000;
+    transition: 0.3s;
+}
+
+input::placeholder {
+    color: #c49a50;
+}
+
+input:focus {
+    border-color: #f5a623;
+    box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.2);
+}
+
+/* General button style */
+button {
+    cursor: pointer;
+    border: none;
+    width: 42px;        
+    height: 42px;       
+    padding: 0;         
+
+    border-radius: 50%; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Add button */
+.add-btn {
+    width: auto;        
+    height: auto;       
+    padding: 13px 20px; 
+    border-radius: 10px;
+    margin-left: 10px;
+    background: #f5a623;
+    color: #3d2000;
+}
+
+.add-btn:hover {
+    background: #e8921a;
+    transform: translateY(-2px);
+}
+
+/* Progress text */
+p {
+    font-size: 0.85rem;
+    color: #8a6d3b;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/* Task list */
+ol {
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+}
+
+/* Each task */
+li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    padding: 15px;
+    background: #fff9ec;
+    border: 1.5px solid #f0c96a;
+    border-radius: 14px;
+    box-shadow: 0 2px 0 #f0c96a;
+    transition: all 0.3s ease;
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 0 #f0c96a;
+}
+
+/* Task text */
+.text {
+    flex: 1;
+    text-align: left;
+    font-size: 1rem;
+    color: #3d2000;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Completed task */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+    color: #a09a8a;
+}
+
+/* Done button */
+.done-btn {
+    background: #fde8c0;
+    color: #b8720a;
+}
+
+/* Delete button */
+.delete-btn {
+    background: #fde8c0;
+    color: #3d2000;
+}
+
+/* Up button */
+.Up-btn {
+    background: #fde8c0;
+    color: #b8720a;
+}
+
+/* Down button */
+.Down-btn {
+    background: #fde8c0;
+    color: #b8720a;
+}
+
+/* Hover effect for action buttons */
+.done-btn:hover,
+.delete-btn:hover,
+.Up-btn:hover,
+.Down-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Disabled buttons */
+button:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .to-do-list {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+        
+    }
+
+    .add-btn {
+        width: auto;        
+        flex-shrink: 0;     
+        margin-left: 0;
+    }
+
+    li {
+        flex-wrap: wrap;
+    }
+
+    .text {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
